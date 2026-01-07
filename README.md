@@ -59,9 +59,22 @@ The full table state is serialized into a text file and can be loaded on the nex
 
 ## 🛠️ Build & Run
 
-### Option A — Compile with g++
+### Compile with g++
 If your repo includes the matching header files (`*.h`) alongside the `.cpp` files:
 
 ```bash
 g++ -std=c++17 -O2 main.cpp -o card-game
 ./card-game
+```
+---
+## 🎮 Gameplay Notes (High Level)
+
+- Players take turns drawing and playing cards from their hand.
+
+- Cards can be added to chains (with type-checking enforced).
+
+- The TradeArea can offer additional card decisions (chain vs discard).
+
+- Chains can be sold to earn coins.
+
+- The game ends when the deck is empty, and the player with the most coins wins (ties possible).
