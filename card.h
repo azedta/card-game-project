@@ -28,6 +28,15 @@ class Card {
 	    return o;
     }
 
+    // Custom exception for type mismatches between card type and chain type.
+    struct IllegalType : public exception {
+
+    	const char * err () const throw () { 
+        	return "Type Error: Card type does not match chain type!"; 
+    	}
+      
+	  };
+
 };
 
 
